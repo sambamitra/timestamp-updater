@@ -16,7 +16,7 @@ public class HealthRepository {
 	private JdbcTemplate jdbcTemplate;
 
 	public void updateTimestamp() {
-		final long current = System.currentTimeMillis();
+		final long current = System.currentTimeMillis()/1000;
 		final String currentDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
 		jdbcTemplate.update("update health.health_now set tstamp=?,tstamp_ccu=?,tstamp_rcvd=?", currentDate, current,
 				current);

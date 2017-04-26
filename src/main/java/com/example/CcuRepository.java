@@ -14,7 +14,7 @@ public class CcuRepository {
 
 	public void updateTimestamp() {
 		final long current = System.currentTimeMillis();
-		jdbcTemplate.update("update t_ccu_now set tstamp=?", current * 1000);
+		jdbcTemplate.update("update t_ccu_now set tstamp=?", current);
 	}
 
 }
