@@ -16,7 +16,7 @@ public class TimestampUpdateService {
 	@Scheduled(fixedRate = 10000)
 	void updateTimestamp() {
 		System.out.println("Updating the timestamps now ...");
-		ccuRepository.updateTimestamp();
-		healthRepository.updateTimestamp();
+		this.ccuRepository.updateTimestamp();
+		this.healthRepository.updateTimestamp();
 	}
 }

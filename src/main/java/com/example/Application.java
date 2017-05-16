@@ -19,6 +19,6 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		service.updateTimestamp();
+		this.service.updateTimestamp();
 	}
 }
